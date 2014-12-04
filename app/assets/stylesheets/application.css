@@ -30,3 +30,6 @@ body{
 .pessoas, .descricao{
 	background: #2E62A6;
 }
+.descricao {
+    margin-left: 3em;
+}

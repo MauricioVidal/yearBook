@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "login" %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -19,6 +19,31 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :foto %><br />
+    <%= f.email_field :foto, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome_completo %><br />
+    <%= f.email_field :nome_completo, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cidade %><br />
+    <%= f.email_field :cidade, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estado %><br />
+    <%= f.email_field :estado, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email_usuario %><br />
+    <%= f.email_field :email_usuario, autofocus: true %>
   </div>
 
   <div class="actions">

@@ -1,15 +1,28 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/*Utilizar o tema "Agencia de Crescimento:
+	#323540 - Azul-Negro
+	#2E62A6 - Azul-Claro
+	#2A558C - Azul-Médio
+	#D3D9C7 - Branco
+	#F2DEA2 - Pastel 
+*/
+
+body{
+	background: #D3D9C7;
+}
+.yield{
+	background: none repeat scroll 0 0 #eff5e3;
+	border-radius: 9px;
+	margin-top: -15px;
+}
+
+.navbar-default{
+	background: #2A558C;
+	border: 1px solid #323540;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a{
+	color: #e7e7e7;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+	color: #8FC3FF;
+}

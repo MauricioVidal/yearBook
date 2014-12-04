@@ -26,3 +26,7 @@ body{
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
 	color: #8FC3FF;
 }
+
+.pessoas, .descricao{
+	background: #2E62A6;
+}

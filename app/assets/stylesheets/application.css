@@ -7,17 +7,17 @@
 */
 
 body{
-	background: #DF494A
+	background: #D3D9C7;
 }
 
 .navbar-default{
 	background: #2A558C;
-	border: #001e55 1,5px;
+	border: 1px solid #323540;
 }
 
 .navbar-default .navbar-brand{
-	color: #F7E1A7;
+	color: #e7e7e7;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
-	color: #F2DEA2;
+	color: #8FC3FF;
 }

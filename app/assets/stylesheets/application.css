@@ -1,12 +1,23 @@
 /*Utilizar o tema "Agencia de Crescimento:
-	#335886 - Azul
-	#3AB15D - Verde
-	#EFC94C - Amarelo
-	#E3793F - Laranja
-	#DF494A - Vermelho 
+	#323540 - Azul-Negro
+	#2E62A6 - Azul-Claro
+	#2A558C - Azul-Médio
+	#D3D9C7 - Branco
+	#F2DEA2 - Pastel 
 */
 
+body{
+	background: #DF494A
+}
+
 .navbar-default{
-	background: #DF494A;
-	border: #c02a2b 1px;
+	background: #2A558C;
+	border: #001e55 1,5px;
+}
+
+.navbar-default .navbar-brand{
+	color: #F7E1A7;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+	color: #F2DEA2;
 }

@@ -9,8 +9,9 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class='col-sm-offset-10 col-sm-10'>
+	<%= yield %>
+</div>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'jquery.min'%>
 <%= javascript_include_tag 'bootstrap.min'%>

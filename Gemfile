@@ -32,6 +32,8 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 gem 'unicorn'
 
+gem 'devise'
+
 group :development do
 	gem 'sqlite3'
 end

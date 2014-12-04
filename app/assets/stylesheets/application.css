@@ -9,6 +9,11 @@
 body{
 	background: #D3D9C7;
 }
+.yield{
+	background: none repeat scroll 0 0 #eff5e3;
+	border-radius: 9px;
+	margin-top: -15px;
+}
 
 .navbar-default{
 	background: #2A558C;

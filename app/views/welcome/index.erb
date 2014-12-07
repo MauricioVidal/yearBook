@@ -2,7 +2,7 @@
 <div class='container'>
 	<div class='row'>
 		<div class='col-sm-5 pessoas' >
-      <% @users.each do |user|%>
+      <% @users.recent(12).each do |user|%>
       <div class='col-sm-4 thumbnail thumb'>
         <a href="#" class='img-thumbnail center-block'>
           <img src="https://dummyimage.com/128x128/eeeeee/333333.png">

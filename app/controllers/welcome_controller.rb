@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   # GET /welcome
   def index
-  	@users = User.order(:nome)
+  	#@users = User.order(:nome)
   end
 
 end

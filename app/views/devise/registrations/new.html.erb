@@ -5,7 +5,7 @@
 
   <div class="field">
     <%= f.label "login" %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.text_field :email, autofocus: true %>
   </div>
 
   <div class="field">
@@ -28,17 +28,17 @@
 
   <div class="field">
     <%= f.label :nome_completo %><br />
-    <%= f.email_field :nome_completo, autofocus: true %>
+    <%= f.text_field :nome_completo, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :cidade %><br />
-    <%= f.email_field :cidade, autofocus: true %>
+    <%= f.text_field :cidade, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :estado %><br />
-    <%= f.email_field :estado, autofocus: true %>
+    <%= f.text_field :estado, autofocus: true %>
   </div>
 
   <div class="field">
@@ -47,7 +47,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", :class => "btn btn-default" %>
+    <%= f.submit "Cadastrar", :class => "btn btn-default" %>
   </div>
 <% end %>
 

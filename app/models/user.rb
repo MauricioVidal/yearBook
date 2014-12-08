@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
 
-  def load_image (data)
+  def load_image data
   	# Record the filename
      self.filename = data.original_filename
      # Store the data for later use
@@ -18,14 +18,14 @@ class User < ActiveRecord::Base
   end
 
    def save_photo
-     if @photo_data
-       # Write the data out to a file
-       name = File.join PHOTO_STORE, self.filename
-       File.open(name, 'wb') do |f|
-         f.write(@photo_data.read)
-      end
-       	@photo_data = nil
-    end
 
-
+	     if @photo_data
+	       # Write the data out to a file
+	       name = File.join PHOTO_STORE, self.filename
+	       File.open(name, 'wb') do |f|
+	       f.write(@photo_data.read)
+	      	end
+	       	@photo_data = nil
+    	end
+	end
 end

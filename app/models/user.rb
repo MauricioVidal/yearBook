@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
+  #validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
 
   def load_image data
   	# Record the filename

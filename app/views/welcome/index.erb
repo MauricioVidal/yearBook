@@ -8,7 +8,7 @@
           <img src="https://dummyimage.com/128x128/eeeeee/333333.png">
         </a>
         <div class="caption text-center">
-          <h3><% link_to "#{user.nome_completo}", controller: "user", action: "show", :class => "btn btn-primary text-center", :role => "button"%><!--<a href="#" class="btn btn-primary text-center" role="button"><%=user.nome_completo %></a>--></h3>
+          <h3><% link_to "#{user.nome_completo}", controller: "user", action: "show", {:class "btn btn-primary text-center", :role => "button"}%><!--<a href="#" class="btn btn-primary text-center" role="button"><%=user.nome_completo %></a>--></h3>
         </div>
       </div>
       <% end %>

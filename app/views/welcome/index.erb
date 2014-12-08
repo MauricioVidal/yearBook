@@ -2,7 +2,7 @@
 <div class='container-fluid'>
 	<div class='row'>
 		<div class='col-sm-7 pessoas' >
-      <% @users.each do |user|%>
+      <% @users.first(10).each do |user|%>
       <div class='col-sm-3 thumbnail thumb'>
         <a href="#" class='img-thumbnail center-block'>
           <img src="https://dummyimage.com/128x128/eeeeee/333333.png">
@@ -11,7 +11,7 @@
           <h3><%= link_to "#{user.nome_completo}",
            {:controller => "users", :action => "show", :id => "#{user.id}"},
            {:class => "btn btn-primary text-center", :role => "button"}
-           %><!--<a href="#" class="btn btn-primary text-center" role="button"><%=user.nome_completo %></a>--></h3>
+           %></h3>
         </div>
       </div>
       <% end %>

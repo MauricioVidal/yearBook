@@ -37,3 +37,6 @@ body{
 .thumbnail .caption {
     padding: 0px;
 }
+.thumbnail .thumb{
+	padding: 0px;
+}

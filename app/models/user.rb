@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
 
-  def load_image =(data)
+  def load_image (data)
   	# Record the filename
      self.filename = data.original_filename
      # Store the data for later use

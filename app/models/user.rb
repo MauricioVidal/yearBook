@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  PHOTO_STORE = File.join RAILS_ROOT, 'public', 'photos'
+  PHOTO_STORE = File.join Rails.root.to_s, 'public', 'photos'
 
   after_save :save_photo
 

@@ -33,7 +33,9 @@ body{
 .descricao {
     margin-left: 3em;
 }
-
+.thumb{
+	margin: 10px 21px 8px;
+}
 .thumbnail .caption {
     padding: 0px;
 }

@@ -47,7 +47,10 @@ body{
 
 
 
-
+#perfil{
+	margin-top: 20px;
+}
 #nome-user{
 	border-bottom: #2A558C 2px solid;
+	margin-top: 60px;
 }

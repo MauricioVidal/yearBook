@@ -34,7 +34,7 @@
               <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
             <% end %>
           </ul>
-           <%=form_tag :controller => "search", :action => "busca",:method => "get", :class => "navbar-form navbar-left"do %> 
+           <%=form_tag {:controller => "search", :action => "busca"},:method => "get", :class => "navbar-form navbar-left"%> 
           <!--<form class="navbar-form navbar-left" role="search">-->
             <div class="form-group">
               <%#= text_field_tag "search", nil, {:placeholder => "Search", :class => "form-control"}%>
@@ -42,7 +42,7 @@
             </div>
             <%#=submit_tag "Pesquisar", :class => "btn btn-default"%><!--<button type="submit" class="btn btn-default">Pesquisar</button>
             </form>-->
-            <% end %>
+            <%# end %>
            <% if user_signed_in? %>
            <p class = "navbar-text"> Bem-vindo ao YearBook <%= current_user.nome_completo%>!!</p>
            <%end%>

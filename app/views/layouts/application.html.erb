@@ -42,8 +42,9 @@
              <!--<input type="text" class="form-control" placeholder="Search", name = "search">-->
             </div>
             <%=submit_tag "Pesquisar",
-            { :class => "btn btn-default"}%><!--<button type="submit" class="btn btn-default">Pesquisar</button>-->
-          </form>
+            { :class => "btn btn-default"}%><!--<button type="submit" class="btn btn-default">Pesquisar</button>
+            </form>-->
+            <% end %>
            <% if user_signed_in? %>
            <p class = "navbar-text"> Bem-vindo ao YearBook <%= current_user.nome_completo%>!!</p>
            <%end%>

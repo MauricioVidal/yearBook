@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  get 'show_usuario/show'
   get 'search/busca'
-
-  get 'user/show'
 
 devise_for :users
 

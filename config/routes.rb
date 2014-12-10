@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'search/busca'
+  get 'search/index'
 
   get 'users/show'
 

@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-  def busca
-  	@user = User.search(params[:search])
+  def index
   end
 end

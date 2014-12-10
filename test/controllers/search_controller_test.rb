@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class SearchControllerTest < ActionController::TestCase
-  test "should get busca" do
-    get :busca
+  test "should get index" do
+    get :index
     assert_response :success
   end
 

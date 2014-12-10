@@ -1,8 +1,10 @@
-Rails.application.routes.draw do
-  get 'usario/show'
-  get 'usario/search'
+Rails.application.routes.draw do 
 
-devise_for :users
+  get 'usuario/show'
+
+  get 'usuario/search'
+
+  devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

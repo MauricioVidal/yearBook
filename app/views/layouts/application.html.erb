@@ -34,7 +34,7 @@
               <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
             <% end %>
           </ul>
-           <%=form_tag({:controller => 'search', :action => 'busca'},{:class => 'navbar-form navbar-left', , :method => "get"}) do %> 
+           <%=form_tag({:controller => 'search', :action => 'busca'},{:class => 'navbar-form navbar-left',:method => "get"}) do %> 
           <!--<form class="navbar-form navbar-left" role="search">-->
             <div class="form-group">
               <%=text_field_tag  'search', nil, {:placeholder => 'Search', :class => 'form-control'}%>

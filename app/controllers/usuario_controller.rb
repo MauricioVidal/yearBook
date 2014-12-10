@@ -10,9 +10,9 @@ class UsuarioController < ApplicationController
   def pesquisar
   	search = params[:search]
   	if search
-    	@user = User.find(:all, :conditions => ['nome_completo LIKE ?', "%#{search}%"])
+    	@user = User.where("nome_completo = #{search}").order(:nome_completo)
   	else
-    	@user = User.find(:all)
+    	@user = User.first(3)
   	end
   end
 end

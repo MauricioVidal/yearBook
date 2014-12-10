@@ -1,4 +1,3 @@
-<%if user_signed_in? %>
 <div class='container-fluid' id='perfil'>
 	<div class='row'>
 		<div class='col-sm-4' id='foto-user'>
@@ -17,6 +16,3 @@
 	    </div>
 	</div>
 </div>
-<% else%>
-<%redirect_to(new_user_session_path, :alert => "É necessario estar logado!!")%>
-<% end%>

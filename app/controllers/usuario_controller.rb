@@ -8,5 +8,11 @@ class UsuarioController < ApplicationController
   end
 
   def pesquisar
+  	search = params[:search]
+  	if search
+    	@user = User.find(:all, :conditions => ['nome_completo LIKE ?', "%#{search}%"])
+  	else
+    	@user = User.find(:all)
+  	end
   end
 end

@@ -1,2 +1,18 @@
-<h1>Usuario#pesquisar</h1>
-<p>Find me in app/views/usuario/pesquisar.html.erb</p>
+<div class='container-fluid'>
+	<div class='row'>
+		<div class='col-sm-7 pessoas' >
+      <% @users.each do |user|%>
+      <div class='col-sm-4 thumbnail thumb'>
+        <a href="#" class='img-thumbnail center-block'>
+          <img src="https://dummyimage.com/128x128/eeeeee/333333.png">
+        </a>
+        <div class="caption text-center">
+          <h3><%= link_to "#{user.nome_completo}",
+           {:controller => "usuario", :action => "show", :id => "#{user.id}"},
+           {:class => "btn btn-primary text-center", :role => "button"}%>
+         </h3>
+
+        </div>
+      </div>
+    <% end %>
+</div>

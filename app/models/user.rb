@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  PHOTO_STORE = File.join Rails.root.to_s, 'public', 'photos'
+  #PHOTO_STORE = File.join Rails.root.to_s, 'public', 'photos'
 
-  after_save :save_photo
+  #after_save :save_photo
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -22,22 +22,22 @@ class User < ActiveRecord::Base
   #end
 
 
-  def load_image data
+  #def load_image data
   	# Record the filename
-     self.filename = data.original_filename
+   #  self.filename = data.original_filename
      # Store the data for later use
-     @photo_data = data
-  end
+    # @photo_data = data
+ #end
 
-   def save_photo
+  # def save_photo
 
-	     if @photo_data
+	 #    if @photo_data
 	       # Write the data out to a file
-	       name = File.join PHOTO_STORE, self.filename
-	       File.open(name, 'wb') do |f|
-	       f.write(@photo_data.read)
-	      	end
-	       	@photo_data = nil
-    	end
-	end
+	  #     name = File.join PHOTO_STORE, self.filename
+	    #   File.open(name, 'wb') do |f|
+	   #    f.write(@photo_data.read)
+	   #   	end
+	    #   	@photo_data = nil
+    #	end
+	#end
 end

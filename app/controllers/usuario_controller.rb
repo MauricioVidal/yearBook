@@ -9,7 +9,7 @@ class UsuarioController < ApplicationController
 
   def pesquisar
   	search = params[:search]
-  	if search
+  	if !search.eql?("")
     	@users = User.where("nome_completo = #{search}").order(:nome_completo)
   	else
     	@users = User.first(9)

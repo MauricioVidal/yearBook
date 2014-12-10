@@ -1,7 +1,8 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
+  get 'search/busca'
 
-get 'users/show'
-get 'search/index'
+  get 'users/show'
+
 devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.

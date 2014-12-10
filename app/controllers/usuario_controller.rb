@@ -12,7 +12,7 @@ class UsuarioController < ApplicationController
   	if !search.eql?("")
     	@users = User.where("nome_completo = '#{search}'").order(:nome_completo)
   	else
-    	@users = User.first(9)
+    	redirect_to("/", :alert => "Nenhum registro encontrado!!")
   	end
   end
 end

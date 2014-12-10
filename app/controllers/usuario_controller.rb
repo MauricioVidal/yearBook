@@ -1,8 +1,7 @@
 class UsuarioController < ApplicationController
   def show
-  	@user = User.find(params[:id])
   end
 
-  def search
+  def pesquisar
   end
 end

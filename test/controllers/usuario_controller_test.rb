@@ -6,8 +6,8 @@ class UsuarioControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get search" do
-    get :search
+  test "should get pesquisar" do
+    get :pesquisar
     assert_response :success
   end
 

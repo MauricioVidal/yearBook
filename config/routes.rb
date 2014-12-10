@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'usuario/show'
 
-  get 'usuario/search'
+  get 'usuario/pesquisar'
 
   devise_for :users
 

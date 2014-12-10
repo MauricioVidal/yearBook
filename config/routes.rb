@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'usario/show'
+
+  get 'usario/search'
+
   get 'show_usuario/show'
   get 'search/busca'
 

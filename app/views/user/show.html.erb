@@ -1,0 +1,18 @@
+<div class='container-fluid' id='perfil'>
+	<div class='row'>
+		<div class='col-sm-4' id='foto-user'>
+			<img class='img-circle col-sm-10' src="http://dummyimage.com/300x300/000/fff.png">
+		</div>
+		<div class='col-sm-8' id='nome-user'>
+			<h2><%=@user.nome_completo%></h2>
+		</div>
+	</div>
+	<div class="row">
+	    <div class='dados'>
+			<h4><small>Nome de Usuário: </small><%=@user.email%></h4>
+			<h4><small>Cidade: </small><%=@user.cidade%></h4>
+			<h4><small>UF: </small><%=@user.estado%></h4>
+			<h4><small>E-mail: </small><%=@user.email_usuario%></h4>
+	    </div>
+	</div>
+</div>

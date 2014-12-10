@@ -1,5 +1,5 @@
 Rails.application.routes.draw do  
-#resources serach
+
 get 'users/show'
 get 'search/index'
 devise_for :users

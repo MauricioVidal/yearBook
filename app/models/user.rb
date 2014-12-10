@@ -13,13 +13,13 @@ class User < ActiveRecord::Base
 
 
 
-  def self.search(search)
-    if search
-      find(:all, :conditions => ['nome_completo LIKE ?', "%#{search}%"])
-    else
-      find(:all)
-    end
-  end
+  #def self.search(search)
+  #  if search
+   #   find(:all, :conditions => ['nome_completo LIKE ?', "%#{search}%"])
+    #else
+     # find(:all)
+    #end
+  #end
 
 
   def load_image data

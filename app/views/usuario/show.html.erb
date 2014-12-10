@@ -18,5 +18,5 @@
 	</div>
 </div>
 <% else%>
-<%=redirect_to(post_url(@post), :alert => "É necessario estar logado!!")%>
+<%=redirect_to(new_user_session_path, :alert => "É necessario estar logado!!")%>
 <% end%>

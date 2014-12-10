@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'search/busca'
-
   get 'users/show'
 
 devise_for :users

@@ -1,4 +1,6 @@
-Rails.application.routes.draw do  get 'users/show'
+Rails.application.routes.draw do  
+get 'users/show'
+get 'search/index'
 
 devise_for :users
 

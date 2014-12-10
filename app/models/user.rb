@@ -11,6 +11,14 @@ class User < ActiveRecord::Base
   #validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
   #attr_accessible :email, :password, :password_confirmation, :foto, :nome_completo, :cidade, :estado,:email_usuario, :descricao
 
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
+
   def load_image data
   	# Record the filename
      self.filename = data.original_filename

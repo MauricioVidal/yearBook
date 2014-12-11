@@ -10,8 +10,10 @@ class UsuarioController < ApplicationController
   def pesquisar
   	search = params[:search]
   	if !search.eql?("")
-      @users = User.where("nome_completo LIKE '%#{search}%' OR nome_copleto LIKE '%#{search.upcase}%' "+
-        "nome_completo LIKE '%#{search}' OR nome_completo LIKE '#{search.capitalize}'").order(:nome_completo)
+      sql = "nome_completo LIKE '#{search}' OR nome_copleto LIKE '%#{search}' OR "
+      sql <<"nome_completo LIKE '#{search}%' OR nome_completo LIKE '%#{search}%' OR"
+      sql << "nome_completo LIKE '#{search.capitalize}' OR nome_completo LIKE '%#{search.upcase}%"
+      @users = User.where(sql).order(:nome_completo)
       if @user.nil?
         redirect_to("/", :alert => "Nenhum registro encontrado!!")  
       end

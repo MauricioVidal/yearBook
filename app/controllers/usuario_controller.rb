@@ -13,9 +13,10 @@ class UsuarioController < ApplicationController
       sql = "nome_completo LIKE '%#{search}%'"
       #sql <<"nome_completo LIKE '#{search}%' OR nome_completo LIKE '%#{search}%' OR "
       #sql <<"nome_completo LIKE '#{search.capitalize}' OR nome_completo LIKE '%#{search.upcase}%"
+      puts sql
       @users = User.where(sql).order(:nome_completo)
-      puts @users.nil?
-      if @user.nil?
+      if @users.nil?
+        puts "Estou aki"
         redirect_to("/", :alert => "Nenhum registro encontrado!!")  
       end
   	else

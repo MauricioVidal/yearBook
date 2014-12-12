@@ -4,9 +4,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   #private
  
-  #def sign_up_params
-   #  devise_parameter_sanitizer.for(:sign_up) << :foto <<:nome_completo << :cidade <<:estado <<:email_usuario <<:descricao << :email << :password << :password_confirmation)
-  #end
+  def sign_up_params
+     devise_parameter_sanitizer.for(:sign_up) << :foto <<:nome_completo << :cidade <<:estado <<:email_usuario <<:descricao << :email << :password << :password_confirmation)
+  end
  
   #def account_update_params
    # params.require(:user).permit(:foto, :nome_completo, :cidade, :estado,:email_usuario, :descricao, :email, :password, :password_confirmation, :current_password)

@@ -5,7 +5,7 @@
       <% @users.first(9).each do |user|%>
       <div class='col-sm-4 thumbnail thumb'>
         <%= link_to image_tag (user.avatar.url(:thumb), :class => "img-thumbnail center-block"),
-            {:controller => "usuario", :action => "show", :id => "#{user.id}"}
+            :controller => "usuario", :action => "show", :id => "#{user.id}"
         %>
         <div class="caption text-center">
           <h3><%= link_to "#{user.nome_completo}",

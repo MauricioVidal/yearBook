@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { 
     :medium => "300x300>", 
     :thumb => "100x100>" }
-
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   #validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
   #attr_accessible :email, :password, :password_confirmation, :foto, :nome_completo, :cidade, :estado,:email_usuario, :descricao
 end

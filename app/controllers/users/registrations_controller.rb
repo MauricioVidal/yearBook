@@ -1,11 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
-  path = File.join(Rails.root.to_s, 'public/photos',params[:user][:foto].original_filename)
-
-  File.open(path, "wb") do |f| 
-    f.write(params[:user][:foto].read)
-  end
 
   #private
  

@@ -8,5 +8,4 @@ class User < ActiveRecord::Base
 
   #validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :foto, :presence => true
   #attr_accessible :email, :password, :password_confirmation, :foto, :nome_completo, :cidade, :estado,:email_usuario, :descricao
-
 end

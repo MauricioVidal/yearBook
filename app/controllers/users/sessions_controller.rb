@@ -7,10 +7,10 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-   def create
+   #def create
      #super
-     redirect_to("/myHome", :notice => "Bem Vindo #{current_user.nome_completo} !!") 
-   end
+     #redirect_to("/myHome", :notice => "Bem Vindo #{current_user.nome_completo} !!") 
+   #end
 
   # DELETE /resource/sign_out
   # def destroy

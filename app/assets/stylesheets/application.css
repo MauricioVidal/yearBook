@@ -58,3 +58,7 @@ body{
 	border-bottom: #2A558C 2px solid;
 	margin-top: 60px;
 }
+
+.form-control{
+	width: 20%;
+}

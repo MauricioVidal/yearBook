@@ -3,12 +3,12 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Login " %>(example@yearbook.com)<br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, :class => "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Foto" %><br />
     <!--<div class='col-sm-4 thumbnail thumb'>-->
         <%=image_tag current_user.avatar.url(:medium), :class => "img-thumbnail center-block"%>
@@ -16,37 +16,37 @@
     <%= f.file_field :avatar, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :nome_completo %><br />
-    <%= f.text_field :nome_completo, autofocus: true %>
+    <%= f.text_field :nome_completo, autofocus: true, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :cidade %><br />
-    <%= f.text_field :cidade, autofocus: true %>
+    <%= f.text_field :cidade, autofocus: true, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :estado %><br />
-    <%= f.text_field :estado, autofocus: true %>
+    <%= f.text_field :estado, autofocus: true, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Email do Usuário" %><br />
-    <%= f.email_field :email_usuario, autofocus: true, :class => "form-group" %>
+    <%= f.email_field :email_usuario, autofocus: true, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Descrição" %><br />
-    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10 %>
+    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10, :class => "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div class="form-group">
+    <%= f.label :password %> <i>(Deixe em branco se você não quiser alterar)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
@@ -56,12 +56,12 @@
   </div>
 
   <div class="field">
-    <%= f.label "Password atual" %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label "Password atual" %> <i>(Precisamos da sua senha atual para confirmar sua identidade e efetuar as mudanças)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Atualizar Perfil" %>
+    <%= f.submit "Atualizar Perfil", :class => 'btn btn-success' %>
   </div>
 <% end %>
 
@@ -69,4 +69,4 @@
 
 <p>Insatisfeito? <%= button_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Você tem certeza:" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back , :class =>'btn btn-default'%>

@@ -43,8 +43,8 @@
               <%=submit_tag 'Pesquisar', :class => 'btn btn-default' %>
             </form>
             <% if user_signed_in? %>
-              <p class = "navbar-text"> Bem-vindo ao YearBook <%= current_user.nome_completo%>!!</p>
-           <%end%>
+              <p class = "navbar-text navbar-right"> Bem-vindo ao YearBook, <%= current_user.nome_completo%>!</p>
+            <%end%>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>

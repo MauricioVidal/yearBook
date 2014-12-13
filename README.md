@@ -1,4 +1,4 @@
-# ruby-getting-started
+# YearBook
 
 A barebones Rails app, which can easily be deployed to Heroku.
 
@@ -27,9 +27,9 @@ $ heroku run rake db:migrate
 $ heroku open
 ```
 
-## Documentation
+## Considerações
 
-For more information about using Ruby on Heroku, see these Dev Center articles:
-
-- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
+Peço perdão pelo vacilo. o servidor local de rails estava com problemas nas duas máquinas. Agora, vão ficar esses 1000 commits aqui mesmo.
+Chamamos de desenvovimento rápido direto da produção.
+- [YearBook](https://glacial-basin-6640.herokuapp.com)
 

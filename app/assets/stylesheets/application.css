@@ -62,3 +62,7 @@ body{
 .form-control{
 	width: 20%;
 }
+
+.btn {
+    margin-top: 10px;
+}

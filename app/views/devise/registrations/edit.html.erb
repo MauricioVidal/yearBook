@@ -1,15 +1,17 @@
 <h2>Edição <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <%= devise_error_messages!, :class => 'form-horizontal'%>
 
   <div class="form-group">
-    <%= f.label "Login " %>(example@yearbook.com)<br />
-    <%= f.email_field :email, autofocus: true, :class => "form-control"%>
+    <%= f.label "Login ", :class =>'col-sm-2 control-label' %>(example@yearbook.com)
+    <div class="col-sm-10">
+      <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Email"%>
+    </div>
   </div>
 
   <div class="form-group">
-    <%= f.label "Foto" %><br />
+    <%= f.label "Foto" :class =>'col-sm-2 control-label'%>
     <!--<div class='col-sm-4 thumbnail thumb'>-->
         <%=image_tag current_user.avatar.url(:medium), :class => "img-thumbnail center-block"%>
     <!--</div>-->
@@ -17,28 +19,38 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :nome_completo %><br />
-    <%= f.text_field :nome_completo, autofocus: true, :class => "form-control" %>
+    <%= f.label :nome_completo :class =>'col-sm-2 control-label'%>
+    <div class="col-sm-10">
+      <%= f.text_field :nome_completo, autofocus: true, :class => "form-control" %>
+    </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :cidade %><br />
-    <%= f.text_field :cidade, autofocus: true, :class => "form-control" %>
+    <%= f.label :cidade :class =>'col-sm-2 control-label'%>
+    <div class="col-sm-10">
+      <%= f.text_field :cidade, autofocus: true, :class => "form-control" %>
+    </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :estado %><br />
-    <%= f.text_field :estado, autofocus: true, :class => "form-control" %>
+    <%= f.label :estado :class =>'col-sm-2 control-label'%>
+    <div class="col-sm-10">
+      <%= f.text_field :estado, autofocus: true, :class => "form-control" %>
+    </div>
   </div>
 
   <div class="form-group">
-    <%= f.label "Email do Usuário" %><br />
-    <%= f.email_field :email_usuario, autofocus: true, :class => "form-control" %>
+    <%= f.label "Email do Usuário" :class =>'col-sm-2 control-label'%>
+    <div class="col-sm-10">
+      <%= f.email_field :email_usuario, autofocus: true, :class => "form-control" %>
+    </div>
   </div>
 
   <div class="form-group">
-    <%= f.label "Descrição" %><br />
-    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10, :class => "form-control" %>
+    <%= f.label "Descrição" :class =>'col-sm-2 control-label'%>
+    <div class="col-sm-10">
+      <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10, :class => "form-control" %>
+    </div>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -47,26 +59,24 @@
 
   <div class="form-group">
     <%= f.label :password %> <i>(Deixe em branco se você não quiser alterar)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control"  %>
   </div>
 
   <div class="field">
     <%= f.label "Confirmação da password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control"  %>
   </div>
 
   <div class="field">
     <%= f.label "Password atual" %> <i>(Precisamos da sua senha atual para confirmar sua identidade e efetuar as mudanças)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <%= f.password_field :current_password, autocomplete: "off", :class => "form-control"  %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Atualizar Perfil", :class => 'btn btn-success' %>
+    <%= f.submit "Atualizar Perfil", :class => 'btn btn-success', :class => "form-control"  %>
   </div>
 <% end %>
 
 <h3>Cancelar minha conta</h3>
 
-<p>Insatisfeito? <%= button_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Você tem certeza:" }, method: :delete %></p>
-
-<%= link_to "Back", :back , :class =>'btn btn-default'%>
+<p>Vamos sentir sua falta. <%= button_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Você tem certeza:" }, method: :delete %></p>

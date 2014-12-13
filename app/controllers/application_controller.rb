@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 	end
 
 def after_sign_in_path_for(resource)
-    sign_in_url = url_for(:action => 'index', :controller => 'my_home')
+    sign_in_url = url_for("my_home/index")
     if request.referer == sign_in_url
       super
     else

@@ -8,7 +8,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
    def create
-     super
+     #super
      redirect_to("/myHome", :notice => "Bem Vindo #{current_user.nome_completo} !!") 
    end
 

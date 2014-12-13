@@ -13,6 +13,8 @@ body{
 	background: none repeat scroll 0 0 #eff5e3;
 	border-radius: 9px;
 	margin-top: -15px;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 
 .navbar-default{
@@ -45,7 +47,7 @@ body{
 }
 
 .navbar-text .navbar-right{
-	color: #e7e7e7
+	color: #e7e7e7;
 }
 
 

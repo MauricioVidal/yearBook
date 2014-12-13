@@ -4,7 +4,7 @@
   <%= devise_error_messages!%>
 
   <div class="form-group">
-    <%= f.label "Login (example@yearbook.com)", :class =>'col-sm-2 control-label' %>
+    <%= f.label "Login ", :class =>'col-sm-2 control-label' %>
     <div class="col-sm-10">
       <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Email"%>
     </div>
@@ -13,7 +13,7 @@
   <div class="form-group">
     <%= f.label "Foto", :class =>'col-sm-2 control-label'%>
     <!--<div class='col-sm-4 thumbnail thumb'>-->
-        <%=image_tag current_user.avatar.url(:medium), :class => "img-thumbnail center-block"%>
+        <%=image_tag current_user.avatar.url(:medium)%>
     <!--</div>-->
     <%= f.file_field :avatar, autofocus: true %>
   </div>

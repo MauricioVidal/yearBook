@@ -2,7 +2,7 @@ class UsuarioController < ApplicationController
   def show
   	if user_signed_in?
   		@user = User.find(params[:id])
-      if(!(current_user.nome_completo.eql?(@user.nome_completo))
+      if(!(current_user.nome_completo.eql?(@user.nome_completo)))
         @visita = Visita.new
         @visita.current_user_id = current_user.id
         @visita.user_visited_id = @user.id

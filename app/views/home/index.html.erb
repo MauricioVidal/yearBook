@@ -1,7 +1,7 @@
 <div class='container-fluid' id='perfil'>
 	<div class='row'>
 		<div class='col-sm-4' id='foto-user'>
-			<%= image_tag @user.avatar.url(:medium), :class => "img-circle col-sm-10"%>
+			<%=image_tag @user.avatar.url(:medium), :class => "img-circle col-sm-10"%>
 		</div>
 		<div class='col-sm-8' id='nome-user'>
 			<h2><%=@user.nome_completo%></h2>

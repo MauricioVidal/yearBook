@@ -4,46 +4,41 @@
   <%= devise_error_messages!%>
 
   <div class="form-group">
-    <%= f.label "Login ", :class =>'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "exemplo@yearbook.com"%>
-    </div>
+    <%= f.label "Login " %>(example@yearbook.com)<br />
+    <%= f.email_field :email, autofocus: true, :class => "form-control"%>
   </div>
 
   <div class="form-group">
-    <%= f.label "Foto", :class =>'col-sm-2 control-label'%>
+    <%= f.label "Foto" %><br />
     <!--<div class='col-sm-4 thumbnail thumb'>-->
-        <%=image_tag current_user.avatar.url(:medium)%>
+        <%=image_tag current_user.avatar.url(:medium), :class => "img-thumbnail center-block"%>
     <!--</div>-->
     <%= f.file_field :avatar, autofocus: true %>
   </div>
 
   <div class="form-group">
-    <%= f.label :nome_completo, :class =>'col-sm-2 control-label'%>
-    <div class="col-sm-10">
-      <%= f.text_field :nome_completo, autofocus: true, :class => "form-control" %>
-    </div>
+    <%= f.label :nome_completo %><br />
+    <%= f.text_field :nome_completo, autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :cidade, :class =>'col-sm-2 control-label'%>
-    <div class="col-sm-10">
-      <%= f.text_field :cidade, autofocus: true, :class => "form-control" %>
-    </div>
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade, autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :estado, :class =>'col-sm-2 control-label'%>
-    <div class="col-sm-10">
-      <%= f.text_field :estado, autofocus: true, :class => "form-control" %>
-    </div>
+    <%= f.label :estado %><br />
+    <%= f.text_field :estado, autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label "Email do Usuário", :class =>'col-sm-2 control-label'%>
-    <div class="col-sm-10">
-      <%= f.email_field :email_usuario, autofocus: true, :class => "form-control" %>
-    </div>
+    <%= f.label "Email do Usuário" %><br />
+    <%= f.email_field :email_usuario, autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Descrição" %><br />
+    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10, :class => "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -51,36 +46,26 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :password, :class =>'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Deixe em branco se você não quiser alterar" %>
-    </div>
+    <%= f.label :password %> <i>(Deixe em branco se você não quiser alterar)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label "Confirmação da password", :class =>'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control"  %>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label "Descrição", :class =>'col-sm-2 control-label'%>
-    <div class="col-sm-10">
-      <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 6, :class => "form-control" %>
-    </div>
+    <%= f.label "Confirmação da password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label "Password atual", :class =>'col-sm-2 control-label' %>
-    <%= f.password_field :current_password, autocomplete: "off", :class => "form-control"  %>
+    <%= f.label "Password atual" %> <i>(Precisamos da sua senha atual para confirmar sua identidade e efetuar as mudanças)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Atualizar Perfil", :class => 'btn btn-success', :class => "form-control", :placeholder => "Precisamos da sua senha atual para confirmar sua identidade e efetuar as mudanças"  %>
+    <%= f.submit "Atualizar Perfil", :class => 'btn btn-success' %>
   </div>
 <% end %>
 
 <h3>Cancelar minha conta</h3>
 
 <p>Insatisfeito? <%= button_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Você tem certeza:"}, method: :delete,  :class => "btn btn-danger" %></p>
+<%= link_to "Back", :back , :class =>'btn btn-default'%>

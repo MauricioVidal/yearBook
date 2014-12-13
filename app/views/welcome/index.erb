@@ -4,12 +4,10 @@
 		<div class='col-sm-7 pessoas' >
       <% @users.first(9).each do |user|%>
       <div class='col-sm-4 thumbnail thumb'>
-        <a href="#" class='img-thumbnail center-block'>
-          <img src="https://dummyimage.com/128x128/eeeeee/333333.png">
-        </a>
+        <%=image_tag user.avatar.url(:thumb), :class => "img-thumbnail center-block"%>
         <div class="caption text-center">
           <h3><%= link_to "#{user.nome_completo}",
-           {:controller => "users", :action => "show", :id => "#{user.id}"},
+           {:controller => "usuario", :action => "show", :id => "#{user.id}"},
            {:class => "btn btn-primary text-center", :role => "button"}%>
          </h3>
 

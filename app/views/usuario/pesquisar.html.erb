@@ -1,0 +1,17 @@
+Pesquisa:
+<div class='container-fluid'>
+	<div class='row'>
+		<div class='col-sm-7 pessoas' >
+      <% @users.each do |user|%>
+      <div class='col-sm-4 thumbnail thumb'>
+          <%=image_tag user.avatar.url(:thumb), :class => "img-thumbnail center-block"%>
+        <div class="caption text-center">
+          <h3><%= link_to "#{user.nome_completo}",
+           {:controller => "usuario", :action => "show", :id => "#{user.id}"},
+           {:class => "btn btn-primary text-center", :role => "button"}%>
+         </h3>
+
+        </div>
+      </div>
+    <% end %>
+</div>

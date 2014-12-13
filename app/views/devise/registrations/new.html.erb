@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "Login (example@yearbook.com)" %><br />
     <%= f.text_field :email, autofocus: true %>
   </div>
 
@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :foto %><br />
-    <%= f.file_field :foto, autofocus: true %>
+    <%= f.label "Foto" %><br />
+    <%= f.file_field :avatar, autofocus: true %>
   </div>
 
   <div class="field">
@@ -42,9 +42,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :email_usuario %><br />
+    <%= f.label "Email do Usuário" %><br />
     <%= f.email_field :email_usuario, autofocus: true, :class => "form-group" %>
   </div>
+
+  <div class="field">
+    <%= f.label "Descrição" %><br />
+    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10 %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit "Cadastrar", :class => "btn btn-default" %>

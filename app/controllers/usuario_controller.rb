@@ -3,7 +3,7 @@ class UsuarioController < ApplicationController
   	if user_signed_in?
   		@user = User.find(params[:id])
       #if(!(current_user.nome_completo.eql?(@user.nome_completo))
-        @visita = Visita.new({current_user, @user})
+        @visita = Visita.new(current_user, @user)
         @visita.save
       #end
   	else

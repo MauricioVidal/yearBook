@@ -2,10 +2,10 @@ class UsuarioController < ApplicationController
   def show
   	if user_signed_in?
   		@user = User.find(params[:id])
-      if(!(current_user.eql?(@user))
-        @visita = Visitum.new(current_user, @user)
-        @visita.save
-      end
+      #if(!(current_user.eql?(@user))
+       # @visita = Visitum.new(current_user, @user)
+        #@visita.save
+      #end
   	else
   		redirect_to(new_user_session_path, :alert => "É necessario estar logado!!")
   	end

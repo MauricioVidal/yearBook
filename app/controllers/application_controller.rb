@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
       	u.permit(:avatar ,:nome_completo , :cidade ,:estado ,:email_usuario ,:descricao , :email ,:password ,:password_confirmation, :descricao) 
       }
       devise_parameter_sanitizer.for(:account_update) { |u| 
-        u.permit(:avatar ,:nome_completo , :cidade ,:estado ,:email_usuario ,:descricao , :email ,:password ,:password_confirmation, :descricao) 
+        u.permit(:avatar ,:nome_completo , :cidade ,:estado ,:email_usuario ,:descricao , :email ,:password ,:password_confirmation, :current_password , :descricao) 
       }
 	end
 

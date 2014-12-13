@@ -1,7 +1,7 @@
 <h2>Edição <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages!, :class => 'form-horizontal'%>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name),:class => 'form-horizontal', html: { method: :put }) do |f| %>
+  <%= devise_error_messages!%>
 
   <div class="form-group">
     <%= f.label "Login ", :class =>'col-sm-2 control-label' %>(example@yearbook.com)

@@ -46,7 +46,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <i>(Deixe em branco se você não quiser alterar)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
@@ -56,12 +56,12 @@
   </div>
 
   <div class="field">
-    <%= f.label "Password atual" %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label "Password atual" %> <i>(Precisamos da sua senha atual para confirmar sua identidade e efetuar as mudanças)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Atualizar Perfil" %>
+    <%= f.submit "Atualizar Perfil", :class => 'btn btn-success' %>
   </div>
 <% end %>
 

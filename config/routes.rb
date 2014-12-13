@@ -1,5 +1,7 @@
 Rails.application.routes.draw do 
 
+  resources :visita
+
   get 'home/index'
 
   get 'usuario/show'

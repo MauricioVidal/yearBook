@@ -11,7 +11,7 @@
   <div class="field">
     <%= f.label "Foto" %><br />
     <div class='col-sm-4 thumbnail thumb'>
-        <%=image_tag :avatar.url(:thumb), :class => "img-thumbnail center-block"%>
+        <%=image_tag current_user.avatar.url(:thumb), :class => "img-thumbnail center-block"%>
     </div>
     <%= f.file_field :avatar, autofocus: true %>
   </div>

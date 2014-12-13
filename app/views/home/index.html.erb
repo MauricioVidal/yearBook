@@ -20,8 +20,7 @@
 			<p><%=@user.descricao%></p>
 			<h4><small> Você visitou recentemente:</small><br\>
 				<% for @visitas.each do |visita|%>
-					<% user = User.find(visita.user_visited_id) %>
-					<%=user.nome_completo %><br\>
+					<%=User.find(visita.user_visited_id).nome_completo %><br\>
 				<%end%>			
 		</div>
 	</div>

@@ -50,6 +50,9 @@ body{
 	color: #e7e7e7;
 }
 
+html body div.container div.col-sm-offset-1.col-sm-10.yield form#edit_user.edit_user div.form-edit-texto.col-sm-4 div.form-group{
+	padding-left: 0;
+}
 
 #perfil{
 	margin-top: 20px;

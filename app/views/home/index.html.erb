@@ -21,7 +21,7 @@
 			<h4><small> Você visitou recentemente:</small></br>
 				<% @visitas.each do |visita|%>
 					<% user = User.find(visita) %>
-					<%=user.nome_completo  %></br>
+					<%=user.nome_completo + " "  %>
 				<% end %>
 			</h4>			
 		</div>

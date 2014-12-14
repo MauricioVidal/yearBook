@@ -20,7 +20,7 @@
 			<p><%=@user.descricao%></p>
 			<h4><small> Você visitou recentemente:</small><br\>
 				<% @visitas.each do |visita|%>
-					<%=visita.users.nome_completo  %><br\>
+					<% puts "#{visita.user_visited_id}"  %><br\>
 				<% end %>
 			</h4>			
 		</div>

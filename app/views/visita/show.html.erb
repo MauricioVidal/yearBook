@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Current user:</strong>
+  <%= @visitum.current_user_id %>
+</p>
+
+<p>
+  <strong>User visited:</strong>
+  <%= @visitum.user_visited_id %>
+</p>
+
+<%= link_to 'Edit', edit_visitum_path(@visitum) %> |
+<%= link_to 'Back', visita_path %>

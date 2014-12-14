@@ -1,2 +1,32 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class='container-fluid' id='perfil'>
+	<div class='row'>
+		<div class='col-sm-4' id='foto-user'>
+			<%=image_tag @user.avatar.url(:medium), :class => "img-circle col-sm-10"%>
+		</div>
+		<div class='col-sm-8' id='nome-user'>
+			<h2><%=@user.nome_completo%></h2>
+		</div>
+	</div>
+	<div class="row">
+	    <div class="dados col-sm-6">
+			<h4><small>Nome Completo: </small><%=@user.nome_completo%></h4>
+			<h4><small>Login: </small><%=@user.email%></h4>
+			<h4><small>Cidade: </small><%=@user.cidade%></h4>
+			<h4><small>UF: </small><%=@user.estado%></h4>
+			<h4><small>E-mail: </small><%=@user.email_usuario%></h4>
+		</div>
+		<div class="col-sm-4 col-sm-offset-1" id="descricao">
+			<h4><small>Descrição Pessoal: </small></h4>
+			<p><%=@user.descricao%></p>
+			<h4><small> Você visitou recentemente:</small></br>
+				<% @visitas.each do |visita|%>
+					<% user = User.find(visita) %>
+					<% if @visitas.last == visita %>
+						<%=user.nome_completo%>
+					<% else %>	
+						<%=user.nome_completo + ", "  %>
+					<% end %>
+				<% end %>
+			</h4>			
+		</div>
+	</div>

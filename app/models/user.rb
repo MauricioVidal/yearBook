@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
     :medium => "300x300>", 
     :thumb => "128x128>" }
 
-  has_many :visitas,:dependent => :destroy
+  belongs_to :visita
 
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :avatar, :presence => true

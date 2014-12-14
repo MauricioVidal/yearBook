@@ -1,6 +1,6 @@
 class VisitaController < ApplicationController
   before_action :set_visitum, only: [:show, :edit, :update, :destroy]
-  berfore_filter :authenticate_user!
+  before_filter :authenticate_user!
   respond_to :html
 
   def index

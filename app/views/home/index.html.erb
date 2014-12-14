@@ -19,9 +19,9 @@
 			<h4><small>Descrição Pessoal: </small></h4>
 			<p><%=@user.descricao%></p>
 			<h4><small> Você visitou recentemente:</small><br\>
-				<%# for @visitas.each do |visita|%>
-					<%#=visita.user_visited_id%><br\>
-				<%#end%>
+				<% for @visitas.each do |visita|%>
+					<%=visita.user_visited_id%><br\>
+				<%end%>
 			</h4>			
 		</div>
 	</div>

@@ -61,12 +61,3 @@ html body div.container div.col-sm-offset-1.col-sm-10.yield form#edit_user.edit_
 	border-bottom: #2A558C 2px solid;
 	margin-top: 60px;
 }
-
-#footer{
-	background: #2A558C;
-	border: 1px solid #323540;	
-	color: #fff;
-	height: 30px;
-	padding-top: 100px; 
-	padding-bottom: 30px;
-}

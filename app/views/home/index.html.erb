@@ -20,12 +20,16 @@
 			<p><%=@user.descricao%></p>
 			<h4><small> Você visitou recentemente:</small></br>
 				<% @visitas.each do |visita|%>
+					<% begin%>
 					<% user = User.find(visita) %>
 					<% if @visitas.last == visita %>
 						<%=user.nome_completo%>
 					<% else %>	
 						<%=user.nome_completo + ", "  %>
 					<% end %>
+					<%rescue ActiveRecord::RecordNotFound%>
+					
+					<%end%>
 				<% end %>
 			</h4>			
 		</div>

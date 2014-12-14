@@ -11,8 +11,6 @@ class User < ActiveRecord::Base
 
   belongs_to :visita
 
-  validates :email, :email => false
-
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates :nome_completo, :cidade, :estado, :email_usuario, :descricao, :avatar, :presence => true
   

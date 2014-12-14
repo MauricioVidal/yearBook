@@ -1,67 +1,65 @@
 <h2>Edição <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put,:class => 'form-horizontal' }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :role => "form" }) do |f| %>
   <%= devise_error_messages!%>
 
-  <div class="field">
-    <%= f.label "Login " %>(example@yearbook.com)<br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="form-group">
+    <%= f.label "Login " %>
+    <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder"exemplo@yearbook.com"%>
   </div>
 
-  <div class="field">
-    <%= f.label "Foto" %><br />
-    <!--<div class='col-sm-4 thumbnail thumb'>-->
+  <div class="form-group">
+    <%= f.label "Foto" %>
         <%=image_tag current_user.avatar.url(:medium), :class => "img-thumbnail center-block"%>
-    <!--</div>-->
     <%= f.file_field :avatar, autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :nome_completo %><br />
-    <%= f.text_field :nome_completo, autofocus: true %>
+  <div class="form-group">
+    <%= f.label :nome_completo %>
+    <%= f.text_field :nome_completo, autofocus: true, :class => "form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label :cidade %><br />
-    <%= f.text_field :cidade, autofocus: true %>
+  <div class="form-group">
+    <%= f.label :cidade %>
+    <%= f.text_field :cidade, autofocus: true, :class => "form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label :estado %><br />
-    <%= f.text_field :estado, autofocus: true %>
+  <div class="form-group">
+    <%= f.label :estado %>
+    <%= f.text_field :estado, autofocus: true, :class => "form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label "Email do Usuário" %><br />
-    <%= f.email_field :email_usuario, autofocus: true, :class => "form-group" %>
+  <div class="form-group">
+    <%= f.label "Email do Usuário" %>
+    <%= f.email_field :email_usuario, autofocus: true, :class => "form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label "Descrição" %><br />
-    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 10 %>
+  <div class="form-group">
+    <%= f.label "Descrição" %>
+    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 4, :class => "form-control"%>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="form-group">
+    <%= f.label "Nova Senha" %>
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label "Confirmação da password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="form-group">
+    <%= f.label "Confirme a nova Senha" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control"%>
   </div>
 
-  <div class="field">
-    <%= f.label "Password atual" %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+  <div class="form-group">
+    <%= f.label "Senha Atual" %>
+    <%= f.password_field :current_password, autocomplete: "off", :class => "form-control"%>
   </div>
 
   <div class="actions">
-    <%= f.submit "Atualizar Perfil" %>
+    <%= f.submit "Atualizar Perfil", :class => "btn btn-success"%>
   </div>
 <% end %>
 

@@ -20,6 +20,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label "Email do Usuário" %>
+    <%= f.email_field :email_usuario, autofocus: true, :class => "form-control form-edit"%>
+  </div>
+
+  <div class="form-group">
     <%= f.label :cidade %>
     <%= f.text_field :cidade, autofocus: true, :class => "form-control form-edit"%>
   </div>
@@ -27,16 +32,6 @@
   <div class="form-group">
     <%= f.label :estado %>
     <%= f.text_field :estado, autofocus: true, :class => "form-control form-edit"%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label "Email do Usuário" %>
-    <%= f.email_field :email_usuario, autofocus: true, :class => "form-control form-edit"%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label "Descrição" %>
-    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 4, :class => "form-control form-edit"%>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -51,6 +46,11 @@
   <div class="form-group">
     <%= f.label "Confirme a nova Senha" %>
     <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control form-edit"%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Descrição" %>
+    <%= f.text_area :descricao, autofocus: true, cols: 40, rows: 4, :class => "form-control form-edit"%>
   </div>
 
   <div class="form-group">

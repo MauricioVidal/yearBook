@@ -20,7 +20,7 @@
 			<p><%=@user.descricao%></p>
 			<h4><small> Você visitou recentemente:</small><br\>
 				<% @visitas.each do |visita|%>
-					<%=visita.usuario.nome_completo  %><br\>
+					<%=visita.user.nome_completo  %><br\>
 				<% end %>
 			</h4>			
 		</div>

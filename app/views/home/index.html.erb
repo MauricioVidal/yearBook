@@ -18,9 +18,10 @@
 		<div class="col-sm-4 col-sm-offset-1" id="descricao">
 			<h4><small>Descrição Pessoal: </small></h4>
 			<p><%=@user.descricao%></p>
-			<h4><small> Você visitou recentemente:</small><br\>
+			<h4><small> Você visitou recentemente:</small></br>
 				<% @visitas.each do |visita|%>
-					<%=User.find(visita).nome_completo  %><br\>
+					<% user = User.find(visita) %>
+					<%=user.nome_completo  %></br>
 				<% end %>
 			</h4>			
 		</div>
